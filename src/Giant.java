@@ -32,9 +32,9 @@ public class Giant extends Critter {
     }
 
     public void setGiantTalk() {
-        if (giantTalk == "fee") {
+        if (giantTalk.equals("fee")) {
             giantTalk = "fie";
-        } else if (giantTalk == "fie") {
+        } else if (giantTalk.equals("fie")) {
             giantTalk = "fum";
         } else {
             giantTalk = "fee";
