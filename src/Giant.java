@@ -25,13 +25,14 @@ public class Giant extends Critter {
 
     @Override
     public String toString() {
-        if (numMoves % 6 == 0) { // change Giant's string representation every 6 moves
+        if ((numMoves % 6) == 0) { // change Giant's string representation every 6 moves
             setGiantTalk();
         }
+        numMoves += 1;
         return giantTalk;
     }
 
-    public void setGiantTalk() {
+    private void setGiantTalk() {
         if (giantTalk.equals("fee")) {
             giantTalk = "fie";
         } else if (giantTalk.equals("fie")) {
@@ -39,6 +40,5 @@ public class Giant extends Critter {
         } else {
             giantTalk = "fee";
         }
-        numMoves += 1;
     }
 }
