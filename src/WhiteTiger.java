@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class WhiteTiger extends Critter{
-    private static Color color = Color.WHITE;
+    private static  final Color color = Color.WHITE;
     private boolean infectedOther = false;
 
     public WhiteTiger() {}

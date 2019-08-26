@@ -5,7 +5,7 @@ public class Tiger extends Critter {
     private int colorCount = 0;
     private int randomNum;
     private Color color;
-    private static Color[] tigerColors = {Color.RED, Color.GREEN, Color.BLUE};
+    private static final Color[] TIGERCOLORS = {Color.RED, Color.GREEN, Color.BLUE};
     private static Random generator = new Random();
 
     public Tiger() {}
@@ -27,12 +27,12 @@ public class Tiger extends Critter {
     public Color getColor() {
         switch (colorCount) {
             case 0:
-                randomNum = generator.nextInt(tigerColors.length);
-                setColor(tigerColors[randomNum]);
+                randomNum = generator.nextInt(TIGERCOLORS.length);
+                setColor(TIGERCOLORS[randomNum]);
                 break;
             case 3:
-                randomNum = generator.nextInt(tigerColors.length);
-                setColor(tigerColors[randomNum]);
+                randomNum = generator.nextInt(TIGERCOLORS.length);
+                setColor(TIGERCOLORS[randomNum]);
                 this.colorCount = 0;
                 break;
         }
