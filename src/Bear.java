@@ -2,6 +2,11 @@ import java.awt.*;
 
 public class Bear extends Critter {
     private int moves = 1;
+    private boolean polar;
+
+    public Bear(boolean polar) {
+        this.polar = polar;
+    }
 
     @Override
     public Action getMove(CritterInfo info) {
@@ -18,9 +23,15 @@ public class Bear extends Critter {
 
     @Override
     public Color getColor() {
-        return Color.WHITE;
+        if (polar) {
+            return Color.WHITE;
+        } else {
+            return Color.BLACK;
+        }
+
     }
 
+    // Alternate between / and \ for movement based on number of moves already made.
     @Override
     public String toString() {
         if (moves % 2 == 0) {
