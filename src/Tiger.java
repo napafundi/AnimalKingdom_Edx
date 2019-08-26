@@ -24,11 +24,6 @@ public class Tiger extends Critter {
     }
 
     @Override
-    public String toString() {
-        return "TGR";
-    }
-
-    @Override
     public Color getColor() {
         switch (colorCount) {
             case 0:
@@ -47,6 +42,11 @@ public class Tiger extends Critter {
 
     private void setColor(Color newColor) {
         this.color = newColor;
+    }
+
+    @Override
+    public String toString() {
+        return "TGR";
     }
 
 }
